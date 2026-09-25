@@ -76,7 +76,7 @@ public class Main
         System.out.println("La distancia en metros es " + (distancia * 1852));
 
         /*
-        Ej:8 Escribe un programa que lee dos números y los visualiza en orden ascendente
+        Ej8: Escribe un programa que lee dos números y los visualiza en orden ascendente
         */
         System.out.println("Dime dos numeros y te les pongo en orden ascendente");
         scan = new Scanner(System.in);
@@ -88,7 +88,7 @@ public class Main
 
 
         /*
-        Ej:9Escribe un programa que lee dos números y nos dice cuál es el mayor o si son iguales.
+        Ej9:Escribe un programa que lee dos números y nos dice cuál es el mayor o si son iguales.
         */
         System.out.println("Dime dos numeros y te digo cual es mayor o si son iguales");
         scan = new Scanner(System.in);
@@ -100,8 +100,18 @@ public class Main
         System.out.println("El numero mayor es num2 " + (numero5<numero6));
         System.out.println("Son iguales " + (numero5==numero6));
 
-
-
+        /*
+        Ej10:Escribe un programa que lea tres números distintos y nos diga cuál es el mayor
+        */
+        System.out.println("Dime tres numeros y te digo cual es mayor");
+        scan = new Scanner(System.in);
+        System.out.println("Dime el primer numero");
+        int numero7 = scan.nextInt();
+        System.out.println("Dime el segundo numero");
+        int numero8 = scan.nextInt();
+        System.out.println("Dime el tercer numero");
+        int numero9 = scan.nextInt();
+        System.out.println("");
 
     }
 

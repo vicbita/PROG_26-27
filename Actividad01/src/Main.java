@@ -8,13 +8,14 @@ public class Main
         /*
         Ej1:Escribe un programa que dé los “buenos días”.
         */
+        System.out.println("EJERCICIO 1");
         System.out.println("Buenos dias");
 
         /*
         Ej2:Escribe un programa que calcule y
         muestre el área de un cuadrado de lado igual a 5.
         */
-
+        System.out.println("EJERCICIO 2");
         int lado = 5;
         System.out.println("El area del cuadrado es" +lado*lado);
 
@@ -22,7 +23,7 @@ public class Main
         Ej3:Escribe un programa que calcule el área de un
         cuadrado cuyo lado se introduce porteclado.
         */
-
+        System.out.println("EJERCICIO 3");
         Scanner scan = new Scanner(System.in);
         System.out.println("Introduce el lado");
         int lado2 = scan.nextInt();
@@ -32,6 +33,7 @@ public class Main
         Ej4:Escribe un programa que lea dos números, calcule y
         muestre el valor de sus suma, resta,producto y división.
         */
+        System.out.println("EJERCICIO 4");
         scan = new Scanner(System.in); /*En este ej. estaba probando que pasa si le doy un numero decimal, y por eso he puesto double para practicar*/
         System.out.println("Dime primer numero");
         double numero = scan.nextDouble();
@@ -48,6 +50,7 @@ public class Main
         circunferencia, el área del círculo y el volumen de la esfera que corresponden
         con dicho radio.
         */
+        System.out.println("EJERCICIO 5");
         scan = new Scanner(System.in);
         System.out.println("Dime el radio");
         double radio = scan.nextDouble();
@@ -59,6 +62,7 @@ public class Main
         Ej6:Escribe un programa que dado el precio de un artículo y el
         precio de venta real nos muestre el porcentaje de descuento realizado.
         */
+        System.out.println("EJERCICIO 6");
         scan=new Scanner(System.in);
         System.out.println("Dime el precio de articulo");
         double precioart = scan.nextDouble();
@@ -70,6 +74,7 @@ public class Main
         Ej7: Escribe un programa que lea un valor correspondiente a una distancia en millas marinas
         y escriba la distancia en metros. Sabiendo que una milla marina equivale a 1.852 metros
         */
+        System.out.println("EJERCICIO 7");
         scan = new Scanner(System.in);
         System.out.println("Dime la distancia en millas marinas");
         double distancia = scan.nextDouble();
@@ -78,7 +83,7 @@ public class Main
         /*
         Ej8: Escribe un programa que lee dos números y los visualiza en orden ascendente
         */
-        System.out.println("Dime dos numeros y te les pongo en orden ascendente");
+        System.out.println("EJERCICIO 8");
         scan = new Scanner(System.in);
         System.out.println("Dime el primer numero");
         int numero3 = scan.nextInt();
@@ -90,7 +95,7 @@ public class Main
         /*
         Ej9:Escribe un programa que lee dos números y nos dice cuál es el mayor o si son iguales.
         */
-        System.out.println("Dime dos numeros y te digo cual es mayor o si son iguales");
+        System.out.println("EJERCICIO 9");
         scan = new Scanner(System.in);
         System.out.println("Dime el primer numero");
         int numero5 = scan.nextInt();
@@ -103,7 +108,7 @@ public class Main
         /*
         Ej10:Escribe un programa que lea tres números distintos y nos diga cuál es el mayor
         */
-        System.out.println("Dime tres numeros y te digo cual es mayor");
+        System.out.println("EJERCICIO 10");
         scan = new Scanner(System.in);
         System.out.println("Dime el primer numero");
         int numero7 = scan.nextInt();
@@ -111,7 +116,48 @@ public class Main
         int numero8 = scan.nextInt();
         System.out.println("Dime el tercer numero");
         int numero9 = scan.nextInt();
-        System.out.println("");
+        System.out.println("El numero mayor es " + Math.max(Math.max(numero7, numero8), numero9)); ;
+
+        /*
+        Ej:11Escribe un programa que lee dos números, calcula y muestra el valor de su suma, resta,
+        producto y división.
+        */
+        System.out.println("EJERCICIO 11");
+        System.out.println("No dividas entre 0");
+        scan = new Scanner(System.in);
+        System.out.println("Dime primer numero");
+        double numero10 = scan.nextDouble();
+        System.out.println("Dime segundo numero");
+        double numero11 = scan.nextDouble();
+        System.out.println("La suma es " + (numero10+numero11) );
+        System.out.println("La resta es " + (numero10-numero11) );
+        System.out.println("La multiplicacion es " + (numero10*numero11) );
+        System.out.println("La division es " + (numero10/numero11) );
+
+        /*
+        Ej:12 Escribe un programa que lee 2 números y muestra el mayor
+        */
+        System.out.println("EJERCICIO 12");
+        scan = new Scanner(System.in);
+        System.out.println("Dime un numero");
+        int numero12 = scan.nextInt();
+        System.out.println("Dime el segundo numero");
+        int numero13 = scan.nextInt();
+        System.out.println("El primer numero es mayor " + (numero12>numero13));
+        System.out.println("El segundo numero es mayor " + (numero13>numero12));
+
+        /* Ej13:
+        Escribe un programa que lee un número y me dice si es positivo o negativo
+        consideraremos el cero como positivo.
+        */
+        System.out.println("EJERCICIO 13");
+        scan = new Scanner(System.in);
+        System.out.println("Dime un numero");
+        int numero14 = scan.nextInt();
+        System.out.println("El numero es positivo" + (numero14 >= 0));
+        System.out.println("El numero es positivo" + (numero14 <0));
+
+
 
     }
 

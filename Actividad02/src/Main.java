@@ -125,5 +125,23 @@ public class Main
         }
         System.out.println("El factorial es "+ facto);
 
+
+        /*
+        Ej9:Escribe un programa que recibe como datos de entrada una
+        hora expresada en horas,
+        minutos y segundos que nos calcula y escribe la hora, minutos y segundos que serán,
+        transcurrido un segundo.
+        */
+        System.out.println("EJERCICIO9");
+        System.out.println("Dime la hora");
+        scan = new Scanner(System.in);
+        int hora = scan.nextInt();
+        System.out.println("Dime minuto");
+        int minuto = scan.nextInt();
+        System.out.println("Dime segundo");
+        int segundo = scan.nextInt();
+        
+
+
     }
 }

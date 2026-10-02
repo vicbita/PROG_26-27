@@ -84,29 +84,33 @@ public class Main
         System.out.println("Dime que nota has sacado");
         scan =new Scanner(System.in);
         int nota = scan.nextInt();
-        if (nota <=3)
+        if (nota >=0 && nota <5)
         {
             System.out.println("Muy Deficiente");
         }
 
-        else if (nota<5)
+        else if (nota >=3 && nota <6)
         {
             System.out.println("Insuficiente");
         }
 
-        else if (nota<=6)
+        else if (nota >=6 && nota <7)
         {
             System.out.println("Bien");
         }
 
-        else if (nota<=9)
+        else if (nota >=7 && nota <9)
+        {
+            System.out.println("Notable");
+        }
+        else if (nota >= 9 && nota <10)
         {
             System.out.println("Notable");
         }
 
         else
         {
-            System.out.println("Sobresaliente");
+            System.out.println("Introduce un valor entre 0 y 10");
         }
 
         /*
@@ -118,7 +122,7 @@ public class Main
         System.out.println("Dime el numero");
         scan = new Scanner(System.in);
         double numfact = scan.nextDouble();
-        int facto = 1;
+        double facto = 1;
         for (int i = 1; i<=numfact ; i++)
         {
         facto = facto *i;

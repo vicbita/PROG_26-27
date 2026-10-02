@@ -261,21 +261,59 @@ public class Main
         //aqui cogo dos variables la suma se empieze por 0 y el producto por 1, porque si no me va a dar 0, luego hago el
         // for para que me cuente de 1 a 10, y luego le digo que suma que era 0 es 0+1, luego 1+2 y asi hasta 10, lo mismo con producto
 
+        /*
+        Ej14:Escribe un programa que calcula el salario neto semanal de un trabajador en función del
+        número de horas trabajadas y la tasa de impuestos de acuerdo a las siguientes hipótesis:
+        • Las primeras 35 horas se pagan a tarifa normal.
+        • Las horas que pasen de 35 se pagan a 1,5 veces la tarifa normal.
+        • Las tasas de impuestos son:
+        • Los primeros 500 euros son libres de impuestos.
+        • Los siguientes 400 tienen un 25% de impuestos.
+        • Los restantes un 45% de impuestos.
+        Escribir nombre, salario bruto, tasas y salario neto.
+        */
+        System.out.println("EJERCICIO14");
+        scan = new Scanner(System.in);
+        System.out.println("Dime el nombre de trabajador");
+        String nombre= scan.nextLine();
+        System.out.println("Dime cuantas horas ha trabajado esta semana");
+        double horas =scan.nextDouble();
+        System.out.println("Dime cuanto cobra la hora");
+        double tarifa = scan.nextDouble();
+        double salarioNeto;
+        double salarioBruto ;
+        double salarioExtra ;
+        double impuestos =0;
+        if (horas <= 35)
+        {
+            salarioBruto = horas*tarifa; //calculo si ha trabajado menos de 35 horas su salario normal
+        }
 
+        else
+        {
+            salarioExtra= tarifa*(horas-35)*1.5; //aqui calculo las horas extra que ha trabajado *1.5
+            salarioBruto=35*tarifa+salarioExtra; // aqui calculo las 35 horas normales + las extra
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        if (salarioBruto <= 500)
+        {
+            impuestos=0;
+        }
+        else if (salarioBruto<=900)
+        {
+            impuestos=(salarioBruto-500) * 0.25;
+            //aqui calculo salario que esta dentro de impuesto, osea todo lo que pasa 500 pavos
+        }
+        else
+        {
+            impuestos= (salarioBruto-900) *0.45 + (400 *0.25);
+            //aqui igual, calculo todo lo que pasa 45% y sumo el 400 euros (900-500) con 25% anterior
+        }
+        salarioNeto = salarioBruto-impuestos;
+        System.out.println("El trabajador " + nombre ) ;
+        System.out.println("Cobra a la hora " + tarifa + "€");
+        System.out.println("En bruto ha cobrado " + salarioBruto + "€");
+        System.out.println("En neto ha cobrado " + salarioNeto + "€");
+        System.out.println("Ha pagado " + impuestos + "€ " +" en impuestos");
     }
 }

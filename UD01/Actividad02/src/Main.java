@@ -169,7 +169,7 @@ public class Main
         */
         System.out.println("EJERCICIO10");
         scan =new Scanner(System.in);
-        int negativo =0;
+         int negativo =0;
         for (int i = 1; i <=10 ; i++)
         {
             System.out.println("Introduce un numero " + i +":"); //aqui le digo que empezamos en 1 y introducimos los numeros hasta 10
@@ -187,6 +187,27 @@ public class Main
         {
             System.out.println("No se han detectado numeros negativos");
         }
+
+        /*
+        int contador=0;
+        boolean hayNegativos = false;
+        while (contador<=10)
+        {
+            IO.println("Introduce un numero no nulo");
+            int numeroo = scan.nextInt();
+            if (numeroo !=0)
+            {
+            contador++;
+                if (numeroo < 0) {
+                    hayNegativos =true;
+                }
+            }
+        }
+        IO.println("Se han encotrado numeros negativos " +hayNegativos);
+        */
+
+
+
 
         /*
         Ej11: Realiza un programa que lea 10 números no nulos y luego muestre un mensaje
@@ -262,7 +283,7 @@ public class Main
         }
         System.out.println("La suma es "+suma);
         System.out.println("El producto es "+producto);
-        //aqui cogo dos variables la suma se empieze por 0 y el producto por 1, porque si no me va a dar 0, luego hago el
+        //aqui cojo dos variables la suma se empieze por 0 y el producto por 1, porque si no me va a dar 0, luego hago el
         // for para que me cuente de 1 a 10, y luego le digo que suma que era 0 es 0+1, luego 1+2 y asi hasta 10, lo mismo con producto
 
         /*

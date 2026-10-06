@@ -77,13 +77,13 @@ public class Main
         switch (opcion= scan.nextInt())
         {
           case 1:
-            IO.println(numero+numero2);
+            IO.println("La suma es " + (numero+numero2));
             break;
           case 2:
-            IO.println(numero-numero2);
+            IO.println("El resto es "+ (numero-numero2));
             break;
           case 3:
-            IO.println(numero*numero2);
+            IO.println("La multiplicacion es " + (numero*numero2));
             break;
           case 4:
             if (numero2 ==0)
@@ -92,9 +92,10 @@ public class Main
             }
             else
             {
-              IO.println(numero/numero2);
+              IO.println("La division es " + (numero/numero2));
             }
             break;
+            
         }
       }
     while (opcion!=5);

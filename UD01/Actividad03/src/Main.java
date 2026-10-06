@@ -99,5 +99,75 @@ public class Main
       }
     while (opcion!=5);
 
+
+    IO.println("EJERCICIO1,Otra forma");
+    scan = new Scanner(System.in);
+    int dineroo =0;
+    int dineroRestante = 0;
+
+    //Pido la cantidad de dinero comprobando si es multiplo de 5 y tomando el valor absoluto
+    do
+    {
+      IO.println("Introduza la cantidad de dinero multiplo de 5");
+      dineroo = Math.abs(scan.nextInt());
+
+    }
+    while (dinero %5 != 0);
+
+    int n500=0, n200 =0, n100=0, n50=0, n20 =0, n10 = 0, n5 = 0;
+    dineroRestante = dineroo;
+    if (dineroRestante >= n500)
+    {
+      n500 = dineroRestante / 500;
+      dineroRestante = dineroRestante % 500;
+    }
+    if (dineroRestante >=200)
+    {
+      n200 = dineroRestante / 200;
+      dineroRestante = dineroRestante % 200;
+    }
+    if (dineroRestante >=100)
+    {
+      n100 = dineroRestante / 100;
+      dineroRestante = dineroRestante % 100;
+    }
+    if (dineroRestante >=50)
+    {
+      n50 = dineroRestante / 50;
+      dineroRestante = dineroRestante % 50;
+    }
+    if (dineroRestante >=20)
+    {
+      n20 = dineroRestante / 20;
+      dineroRestante = dineroRestante % 20;
+    }
+    if (dineroRestante >=10)
+    {
+      n10 = dineroRestante / 10;
+      dineroRestante = dineroRestante % 10;
+    }
+    if (dineroRestante >=5)
+    {
+      n5 = dineroRestante / 5;
+      dineroRestante = dineroRestante % 5;
+    }
+
+    IO.println("Billetes de 500 = " + n500);
+    IO.println("Billetes de 200 = " + n200);
+    IO.println("Billetes de 100 = " + n100);
+    IO.println("Billetes de 50 = " + n50);
+    IO.println("Billetes de 20 = " + n20);
+    IO.println("Billetes de 10 = " + n10);
+    IO.println("Billetes de 5 = " + n5);
+
+
+
+
+
+
+
+
+
+
   }
 }

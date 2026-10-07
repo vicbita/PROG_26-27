@@ -11,7 +11,7 @@ public class Main
         IO.println("EJERCICIO1");
         IO.println("Introduze 10 numeros por pantalla");
         Scanner scan= new Scanner(System.in);
-        
+
 
 
 

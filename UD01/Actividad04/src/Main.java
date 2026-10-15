@@ -1,3 +1,4 @@
+import javax.management.ListenerNotFoundException;
 import java.util.Scanner;
 
 public class Main
@@ -149,12 +150,12 @@ public class Main
         */
         IO.println("EJERCICIO7");
         scan = new Scanner(System.in);
-        IO.println("Introduze valor M en pantalla");
+        IO.println("Introduce valor P en pantalla");
         int valorP = scan.nextInt();
-        IO.println("Introduze valor N en pantalla");
+        IO.println("Introduce valor Q en pantalla");
         int valorQ = scan.nextInt();
         //aqui hago vQ-vP+1 pq si tenemos desde 3 hasta 7 tenemos que rellenar 5 numeros, es decir 7-3+1=5
-        int numero7[] = new int[valorQ-valorP+1];
+        int numero7[] = new int[Math.abs(valorQ-valorP+1)];
         for (int i = 0; i < numero7.length ; i++)
         {
 
@@ -198,8 +199,35 @@ public class Main
         int numero9[]= new int[100];
         for (int i = 0; i < numero9.length; i++)
         {
-            numero9[i] = 1 + Math.random()*10;
+            numero9[i] = 1 + (int)(Math.random()*10);
+
         }
+        IO.println("Dime el valor N ");
+        int valorN2 = scan.nextInt();
+        for (int i = 0; i < numero9.length ; i++)
+        {
+            if (numero9[i] == valorN2 )
+            {
+                IO.println("El numero aparece en la posicion " + i);//la i es la posicion y numero9[i] es valor que tiene esa posicion
+            }
+
+        }
+
+        /*
+        EJ10: Crea un programa para realizar cálculos relacionados con la altura (en metros) de
+        personas. Pedirá un valor N y luego almacenará en un array N alturas introducidas por teclado.
+        Luego mostrará la altura media, máxima y mínima, así como cuántas personas
+        miden por encima y por debajo de la media.
+        */
+        IO.println("EJERCICIO10");
+        scan = new Scanner(System.in);
+        IO.println("Dime el valor N ");
+        int personasN = scan.nextInt();
+        
+
+
+
+
 
 
 

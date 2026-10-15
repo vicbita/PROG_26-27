@@ -223,7 +223,7 @@ public class Main
         scan = new Scanner(System.in);
         IO.println("Dime el valor N ");
         int personasN = scan.nextInt();
-        
+
 
 
 

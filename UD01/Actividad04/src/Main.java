@@ -388,13 +388,7 @@ public class Main
 
         IO.println(Arrays.toString(numerosE14));
 
-
-
-
-
-
-
-
+        
 
     }
 }

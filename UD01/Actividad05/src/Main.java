@@ -119,6 +119,7 @@ public class Main
         //aqui hago que la frase2 se cambia, se quitan los espacion y se pone todo en minusculas.
         String fraseProcesada = frase2.replace(" ", "").toLowerCase();
 
+        //Algoritmo para ver si es palindromo
         boolean esPalindromo = true;
         int izquierda = 0;
         int derecha = fraseProcesada.length() -1;
@@ -137,13 +138,7 @@ public class Main
 
 
 
-
-
-
-
-
-
-
-
     }
 }
+
+     

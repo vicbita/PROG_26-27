@@ -130,8 +130,11 @@ public class Main
                 esPalindromo = false;
                 break;
             }
-            izquierda++;
-            derecha--;
+           else
+           {
+                izquierda++;
+                derecha--;
+            }
         }
         IO.println("Son polindromos " + esPalindromo);
 
@@ -141,4 +144,3 @@ public class Main
     }
 }
 
-     

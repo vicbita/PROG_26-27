@@ -264,6 +264,7 @@ public class Main
         IO.println("La altura maxima es " + maxAltura);
         IO.println("La altura minima es " + minALtura);
         IO.println("La altura media es " + alturaMedia);
+
         IO.println("Han encontrado " + contadorMin + " perosnas por debajo de altura media");
         IO.println("Han encontrado " + contadorMax + " personas por encima de la altura media");
 
@@ -343,6 +344,13 @@ public class Main
 
             }
         while(!opcion.equals("c"));
+
+        IO.println("Han encontrado " + contadorMin + "perosnas por debajo de altura media");
+        IO.println("Han encontrado " + contadorMax + "personas por encima de la altura media");
+
+
+
+
 
 
 

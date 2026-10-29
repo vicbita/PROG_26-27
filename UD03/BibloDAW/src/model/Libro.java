@@ -23,9 +23,9 @@ public class Libro {
         this.autor = autor;
         this.titulo = titulo;
         this.nPaginas = 0;
-        this.editorial = "";
-        this.genero = "";
-        this.fechaPublicacion = "";
+        this.editorial = " ";
+        this.genero = " ";
+        this.fechaPublicacion = " ";
 
         this.id= contadorTotal;
         contadorTotal++;

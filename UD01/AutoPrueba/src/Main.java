@@ -317,6 +317,61 @@ public class Main
         IO.println();
 
 
+        do {
+            opcion = scan.nextLine();
+
+
+            switch (opcion) {
+                case "a":
+                    opcion2 = scan.nextLine();
+                    switch (opcion2) {
+
+                        case "a":
+                            IO.println("a) Insertar numero");
+
+                        case "b":
+                            IO.println("b) Borrar numero de una posicion especifica");
+
+                        case "c":
+                            IO.println("c) Modificar numero de una posicion especifica");
+                            break;
+                    }
+                    break;
+
+                case "b":
+                    switch (opcion) {
+                        case "a":
+                            IO.println("a) Media de todos los valores no nulos");
+
+                        case "b":
+                            IO.println("b) Suma de todos los valores");
+
+                        case "c":
+                            IO.println("c) Maximo de la coleccion");
+
+                        case "d":
+                            IO.println("d) Minimo de una coleccion");
+
+                            break;
+                    }
+
+                    break;
+                case "c":
+                    IO.println("Ampliar el valor de una colección");
+
+                    break;
+                case "s":
+                    IO.println("Cerramos el programa");
+
+                default:
+                    IO.println("Opcion invalida, escoja otra opcion");
+
+            }
+        }
+
+        while (!opcion.equals("s"));
+
+
 
 
 

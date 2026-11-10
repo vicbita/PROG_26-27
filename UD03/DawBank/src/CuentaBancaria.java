@@ -4,15 +4,21 @@ public class CuentaBancaria {
     private final String titular;
     private int saldo = 0;
     private Movimiento movimiento [] = new Movimiento[100];
+    private String es = "ES";
 
     //Contador de ID
     private int contador = 0;
 
 
 //Constructor
-    public CuentaBancaria(String iban, String titular ){
+    public CuentaBancaria( String titular ){
+//For para generar él iban, con dos letras que van a ser ES + 22 números aleatorios.
+        for (int i = 0; i < 22; i++)
+        {
+            this.es +=  (int)(Math.random()*10);
 
-        this.iban= iban;
+        }
+        this.iban= es;
         this.titular = titular;
 
     }
@@ -31,7 +37,7 @@ public class CuentaBancaria {
         return this.saldo;
     }
 
-    //Aqui digo que quiero devolver un array de clase Movimiento
+    //Aquí digo que quiero devolver un array de clase Movimiento
     public Movimiento[] getMovimiento() {
         return this.movimiento ;
     }
@@ -39,7 +45,7 @@ public class CuentaBancaria {
 
 
 
-    // Mostrar informacion de la cuenta
+    // Mostrar información de la cuenta
     public String mostrarInfoCuenta (){
         String infoCuenta = "";
 
@@ -80,13 +86,27 @@ public class CuentaBancaria {
             this.saldo = this.saldo + cantidadIngreso;
         }
 
-        if (cantidadIngreso >3000){
+        if (cantidadIngreso >=3000){
 
-            IO.println("El saldo ha superado a 3000€, hay que avisar a hacienda");
+            IO.println("El ingreso ha superado a 3000€, hay que avisar a hacienda");
+        }
+    }
+
+    public void retiroDinero(int cantidadRetiro){
+        if (cantidadRetiro<=0){
+            IO.println("Error, no puedes sacar 0 o valor negativo");
+        }
+
+        else {
+            this.saldo=this.saldo-cantidadRetiro;
+        }
+
+        if (cantidadRetiro >=3000){
+
+            IO.println("Has sacado mucha pasta, avisa a hacienda.");
         }
 
     }
-
 
 
 }

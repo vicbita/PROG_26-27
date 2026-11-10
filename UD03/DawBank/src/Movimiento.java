@@ -1,12 +1,14 @@
+import java.time.LocalDateTime;
+
 public class Movimiento {
     private int id;
-    private String fecha;
-    private String tipo;
+    private LocalDateTime fecha;
+    private Tipo tipo;
     private int cantidad;
 
-    public Movimiento (int id, String fecha, String tipo, int cantidad){
+    public Movimiento (int id, LocalDateTime fecha, Tipo tipo, int cantidad){
         this.id = id;
-        this.fecha = fecha;
+        this.fecha = LocalDateTime.now();
         this.tipo = tipo;
         this.cantidad = cantidad;
     }
@@ -19,16 +21,16 @@ public class Movimiento {
         return cantidad;
     }
 
-    public String getFecha() {
+    public LocalDateTime getFecha() {
         return fecha;
     }
 
-    public String getTipo() {
+    public Tipo getTipo() {
         return tipo;
     }
 
 
-    // Mostrar informacion de movimiento
+    // Mostrar información de movimiento
     public String mostrarInfoMovimiento (){
         String infoMovimiento = "";
 

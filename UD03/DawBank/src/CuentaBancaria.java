@@ -3,7 +3,7 @@ public class CuentaBancaria {
     private final String iban;
     private final String titular;
     private int saldo = 0;
-    private Movimiento movimiento [] = new Movimiento[100];
+    private Movimiento movimiento [] = new Movimiento[100]; //Array de clase Movimiento para guardar cada movimiento en esta calse
     private String es = "ES";
 
     //Contador de ID
@@ -62,6 +62,12 @@ public class CuentaBancaria {
        infoIBAN += "Iban: " + this.iban + "\n";
         return infoIBAN;
     }
+    public String mostrarInfoTitular(){
+        String infoTitular = "";
+
+        infoTitular += "Titular: " + this.titular + "\n";
+        return infoTitular;
+    }
 
     //Mostrar Saldo
     public String mostrarInfoSaldo (){
@@ -77,7 +83,7 @@ public class CuentaBancaria {
 
     public void ingresoDinero (int cantidadIngreso){
 
-        if (cantidadIngreso <=0){
+        if (cantidadIngreso <=0 ){
             IO.println("ERROR, Introduce la cantidad adecuada para ingresar");
             return;
 
@@ -90,29 +96,40 @@ public class CuentaBancaria {
 
             IO.println("El ingreso ha superado a 3000€, hay que avisar a hacienda");
         }
-
+        movimiento[contador]= new  Movimiento(contador+1, Tipo.INGRESO, cantidadIngreso);
         /*
-          Crea un nuevo movimiento de tipo INGRESO, asignándole un ID único y la cantidad ingresada.
-         Después, lo almacena en la siguiente posición disponible del array de movimientos.
+         Crea un nuevo objeto Movimiento con su ID, tipo y cantidad,
+         y lo guarda en la siguiente posición disponible del array.
          */
-        movimiento[contador]= new Movimiento(contador+1, Tipo.INGRESO, cantidadIngreso);
 
         contador++;
+
     }
 
     public void retiroDinero(int cantidadRetiro){
-        if (cantidadRetiro<=0){
+        if (cantidadRetiro<=0 ){
             IO.println("Error, no puedes sacar 0 o valor negativo");
         }
 
-        else {
-            this.saldo=this.saldo-cantidadRetiro;
+        if (this.saldo - cantidadRetiro < -50){
+            IO.println("Error saldo negativo!");
         }
 
         if (cantidadRetiro >=3000){
 
             IO.println("Has sacado mucha pasta, avisa a hacienda.");
         }
+        else {
+            this.saldo=this.saldo-cantidadRetiro;
+        }
+
+
+        movimiento[contador]= new  Movimiento(contador+1, Tipo.RETIRO, cantidadRetiro);
+        /*
+        Crea un nuevo objeto Movimiento con su ID, tipo y cantidad,
+        y lo guarda en la siguiente posición disponible del array.
+        */
+        contador++;
 
     }
 

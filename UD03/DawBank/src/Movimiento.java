@@ -6,7 +6,7 @@ public class Movimiento {
     private Tipo tipo;
     private int cantidad;
 
-    public Movimiento (int id,  Tipo tipo, int cantidad){
+    public Movimiento (int id,  Tipo tipo, int cantidad){ //Constructor de objeto movimiento
         this.id = id;
         this.fecha = LocalDateTime.now();
         this.tipo = tipo;

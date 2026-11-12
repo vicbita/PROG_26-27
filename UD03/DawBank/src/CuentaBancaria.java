@@ -90,6 +90,14 @@ public class CuentaBancaria {
 
             IO.println("El ingreso ha superado a 3000€, hay que avisar a hacienda");
         }
+
+        /*
+          Crea un nuevo movimiento de tipo INGRESO, asignándole un ID único y la cantidad ingresada.
+         Después, lo almacena en la siguiente posición disponible del array de movimientos.
+         */
+        movimiento[contador]= new Movimiento(contador+1, Tipo.INGRESO, cantidadIngreso);
+
+        contador++;
     }
 
     public void retiroDinero(int cantidadRetiro){

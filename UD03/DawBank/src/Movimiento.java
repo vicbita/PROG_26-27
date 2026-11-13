@@ -34,10 +34,10 @@ public class Movimiento {
     public String mostrarInfoMovimiento (){
         String infoMovimiento = "";
 
-        infoMovimiento += "ID: " + this.id + "\n";
-        infoMovimiento += "Fecha: " + this.fecha + "\n";
-        infoMovimiento += "Tipo: " + this.tipo + "\n";
-        infoMovimiento += "Cantidad: " + this.cantidad + " €" +"\n";
+        infoMovimiento += "===ID: " + this.id + "\n===";
+        infoMovimiento += "===Fecha: " + this.fecha + "\n===";
+        infoMovimiento += "===Tipo: " + this.tipo + "\n===";
+        infoMovimiento += "===Cantidad: " + this.cantidad + " €" +"\n===";
         return infoMovimiento;
     }
 }

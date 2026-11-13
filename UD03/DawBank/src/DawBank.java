@@ -11,6 +11,8 @@ public class DawBank
         CuentaBancaria cuenta = new CuentaBancaria(nombre); //creando cuenta con clase CuentaBancaria y guardo el nombre como titular
 
 
+
+
         String opcion = "s";
         do {
             IO.println("1) Mostrar infromacion de la cuenta.");
@@ -59,7 +61,7 @@ public class DawBank
 
                     break;
                 case "7":
-
+                    cuenta.mostrarMovimientos();
 
                     break;
             }

@@ -109,18 +109,19 @@ public class CuentaBancaria {
     public void retiroDinero(int cantidadRetiro){
         if (cantidadRetiro<=0 ){
             IO.println("Error, no puedes sacar 0 o valor negativo");
+            return;
         }
 
         if (this.saldo - cantidadRetiro < -50){
             IO.println("Error saldo negativo!");
-        }
-
-        if (cantidadRetiro >=3000){
-
-            IO.println("Has sacado mucha pasta, avisa a hacienda.");
+            return;
         }
         else {
             this.saldo=this.saldo-cantidadRetiro;
+        }
+        if (cantidadRetiro >=3000){
+
+            IO.println("Has sacado mucha pasta, avisa a hacienda.");
         }
 
 
@@ -132,6 +133,16 @@ public class CuentaBancaria {
         contador++;
 
     }
+
+    public void mostrarMovimientos(){ //he creado este metodo con un for dento, para acceder a todos los movimientos que tengo creados en Movimiento
+
+        for (int i = 0; i <contador ; i++) {
+            movimiento[i].mostrarInfoMovimiento();
+        }
+
+    }
+
+
 
 
 }

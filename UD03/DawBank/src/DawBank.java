@@ -27,22 +27,18 @@ public class DawBank
             switch (opcion) {
                 case "1":
                     IO.println(cuenta.mostrarInfoCuenta()); //llamo al metodo con cuenta.
-
-
                     break;
+
                 case "2":
                     IO.println(cuenta.mostrarInfoIBAN());
                     break;
-
 
                 case "3":
                     IO.println(cuenta.mostrarInfoTitular());
                     break;
 
-
                 case "4":
                     IO.println(cuenta.mostrarInfoSaldo());
-
                     break;
 
                 case "5":
@@ -50,26 +46,23 @@ public class DawBank
                     int dineroIngresado = scan.nextInt();
                     scan.nextLine();
                     cuenta.ingresoDinero(dineroIngresado); //aqui uso directamente el metodo porque es void y no le puedo usar en iop
-
-
                     break;
+
                 case "6":
                     IO.println("===Dime cuanto dinero quieres sacar===");
                     int dineroRetirado = scan.nextInt();
                     scan.nextLine();
                     cuenta.retiroDinero(dineroRetirado);
-
                     break;
+
                 case "7":
-                    cuenta.mostrarMovimientos();
-
+                    IO.println(cuenta.mostrarMovimientos());
                     break;
+
             }
 
         }
         while (!opcion.equals("s")) ;
-
-
 
     }
 }

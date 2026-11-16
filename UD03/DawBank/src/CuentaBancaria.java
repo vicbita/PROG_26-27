@@ -134,11 +134,13 @@ public class CuentaBancaria {
 
     }
 
-    public void mostrarMovimientos(){ //he creado este metodo con un for dento, para acceder a todos los movimientos que tengo creados en Movimiento
-
+    public String mostrarMovimientos(){ //he creado este metodo con un for dento, para acceder a todos los movimientos que tengo creados en Movimiento
+        String mostrarTodosMovimientos = "";
         for (int i = 0; i <contador ; i++) {
-            movimiento[i].mostrarInfoMovimiento();
+
+            mostrarTodosMovimientos += movimiento[i].mostrarInfoMovimiento();
         }
+        return mostrarTodosMovimientos;
 
     }
 

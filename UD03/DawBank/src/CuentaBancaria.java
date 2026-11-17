@@ -2,7 +2,7 @@ public class CuentaBancaria {
 
     private final String iban;
     private final String titular;
-    private int saldo = 0;
+    private int saldo ;
     private Movimiento movimiento [] = new Movimiento[100]; //Array de clase Movimiento para guardar cada movimiento en esta calse
     private String es = "ES";
 
@@ -20,9 +20,10 @@ public class CuentaBancaria {
         }
         this.iban= es;
         this.titular = titular;
+        this.saldo = 0;
 
     }
-
+    //Es mejor inicializar los variables y darles valor en el constructor.
     //Get y Set (Acceder, Cambiar)
 
     public String getIban() {
@@ -96,7 +97,7 @@ public class CuentaBancaria {
 
             IO.println("El ingreso ha superado a 3000€, hay que avisar a hacienda");
         }
-        movimiento[contador]= new  Movimiento(contador+1, Tipo.INGRESO, cantidadIngreso);
+        movimiento[contador]= new  Movimiento(contador+1, Tipo.INGRESO, cantidadIngreso);//----------------REVISAR----------------
         /*
          Crea un nuevo objeto Movimiento con su ID, tipo y cantidad,
          y lo guarda en la siguiente posición disponible del array.
@@ -125,7 +126,7 @@ public class CuentaBancaria {
         }
 
 
-        movimiento[contador]= new  Movimiento(contador+1, Tipo.RETIRO, cantidadRetiro);
+        movimiento[contador]= new  Movimiento(contador+1, Tipo.RETIRO, cantidadRetiro); //--------
         /*
         Crea un nuevo objeto Movimiento con su ID, tipo y cantidad,
         y lo guarda en la siguiente posición disponible del array.
@@ -136,6 +137,7 @@ public class CuentaBancaria {
 
     public String mostrarMovimientos(){ //he creado este metodo con un for dento, para acceder a todos los movimientos que tengo creados en Movimiento
         String mostrarTodosMovimientos = "";
+
         for (int i = 0; i <contador ; i++) {
 
             mostrarTodosMovimientos += movimiento[i].mostrarInfoMovimiento();

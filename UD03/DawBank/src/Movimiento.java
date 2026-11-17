@@ -6,7 +6,7 @@ public class Movimiento {
     private LocalDateTime fecha;
     private Tipo tipo;
     private int cantidad;
-    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");// variable para dar formato a fecha.
+    private DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");// variable para dar formato a fecha.
 
 
 

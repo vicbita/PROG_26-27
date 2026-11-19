@@ -11,7 +11,7 @@ public class CuentaBancaria {
 
 
 //Constructor
-    public CuentaBancaria( String titular ){
+    public  CuentaBancaria( String titular ){
 //For para generar él iban, con dos letras que van a ser ES + 22 números aleatorios.
         for (int i = 0; i < 22; i++)
         {
@@ -81,59 +81,66 @@ public class CuentaBancaria {
 
     //Ingreso de dinero
     //void pq metodo no devuelve ningun valor, public void nombreMetodo(tipo nombreParametro)
+    //Antes lo tenia en void, ahora voy a intentar cambiarlo a boolean para poder hacer el texto.
 
-    public void ingresoDinero (int cantidadIngreso){
+    public boolean ingresoDinero (int cantidadIngreso){
 
-        if (cantidadIngreso <=0 ){
-            IO.println("ERROR, Introduce la cantidad adecuada para ingresar");
-            return;
+        boolean ingresoOk = false;
 
-        }
-        else {
-            this.saldo = this.saldo + cantidadIngreso;
-        }
-
-        if (cantidadIngreso >=3000){
-
-            IO.println("El ingreso ha superado a 3000€, hay que avisar a hacienda");
-        }
-        movimiento[contador]= new  Movimiento(contador+1, Tipo.INGRESO, cantidadIngreso);//----------------REVISAR----------------
-        /*
-         Crea un nuevo objeto Movimiento con su ID, tipo y cantidad,
-         y lo guarda en la siguiente posición disponible del array.
-         */
-
-        contador++;
 
     }
-
-    public void retiroDinero(int cantidadRetiro){
-        if (cantidadRetiro<=0 ){
-            IO.println("Error, no puedes sacar 0 o valor negativo");
-            return;
-        }
-
-        if (this.saldo - cantidadRetiro < -50){
-            IO.println("Error saldo negativo!");
-            return;
-        }
-        else {
-            this.saldo=this.saldo-cantidadRetiro;
-        }
-        if (cantidadRetiro >=3000){
-
-            IO.println("Has sacado mucha pasta, avisa a hacienda.");
-        }
-
-
-        movimiento[contador]= new  Movimiento(contador+1, Tipo.RETIRO, cantidadRetiro); //--------
-        /*
-        Crea un nuevo objeto Movimiento con su ID, tipo y cantidad,
-        y lo guarda en la siguiente posición disponible del array.
-        */
-        contador++;
-
-    }
+//    public void ingresoDinero (int cantidadIngreso){
+//
+//        if (cantidadIngreso <=0 ){
+//            IO.println("ERROR, Introduce la cantidad adecuada para ingresar");
+//            return;
+//
+//        }
+//        else {
+//            this.saldo = this.saldo + cantidadIngreso;
+//        }
+//
+//        if (cantidadIngreso >=3000){
+//
+//            IO.println("El ingreso ha superado a 3000€, hay que avisar a hacienda");
+//        }
+//        movimiento[contador]= new  Movimiento(contador+1, Tipo.INGRESO, cantidadIngreso);//----------------REVISAR----------------
+//        /*
+//         Crea un nuevo objeto Movimiento con su ID, tipo y cantidad,
+//         y lo guarda en la siguiente posición disponible del array.
+//         */
+//
+//        contador++;
+//
+//    }
+//
+//    public void retiroDinero(int cantidadRetiro){
+//        if (cantidadRetiro<=0 ){
+//            IO.println("Error, no puedes sacar 0 o valor negativo");
+//            return;
+//        }
+//
+//        if (this.saldo - cantidadRetiro < -50){
+//            IO.println("Error saldo negativo!");
+//            return;
+//        }
+//        else {
+//            this.saldo=this.saldo-cantidadRetiro;
+//        }
+//        if (cantidadRetiro >=3000){
+//
+//            IO.println("Has sacado mucha pasta, avisa a hacienda.");
+//        }
+//
+//
+//        movimiento[contador]= new  Movimiento(contador+1, Tipo.RETIRO, cantidadRetiro); //--------
+//        /*
+//        Crea un nuevo objeto Movimiento con su ID, tipo y cantidad,
+//        y lo guarda en la siguiente posición disponible del array.
+//        */
+//        contador++;
+//
+//    }
 
     public String mostrarMovimientos(){ //he creado este metodo con un for dento, para acceder a todos los movimientos que tengo creados en Movimiento
         String mostrarTodosMovimientos = "";
